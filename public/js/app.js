@@ -12,9 +12,7 @@ messageTwo.textContent = '';
 
 const getForecast = async (location) => {
   try {
-    const response = await fetch(
-      `http://localhost:3000/weather?address=${location}`
-    );
+    const response = await fetch(`/weather?address=${location}`);
     const data = await response.json();
     console.log(data);
     messageOne.textContent = data.location;
